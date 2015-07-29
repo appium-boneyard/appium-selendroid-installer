@@ -1,4 +1,4 @@
-import {default as sample} from './lib/sample';
+import { setupSelendroid, serverExists, SE_APK_PATH, SE_MANIFEST_PATH, fileMd5 } from './lib/setup';
 
-export {sample};
+export default { setupSelendroid, serverExists, SE_APK_PATH, SE_MANIFEST_PATH, fileMd5 };
 
