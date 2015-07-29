@@ -1,0 +1,47 @@
+{
+  "name": "appium-selendroid-installer",
+  "description": "Description goes here.",
+  "keywords": [
+    "appium"
+  ],
+  "version": "0.0.0",
+  "author": "appium",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/appium-selendroid-installer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appium/appium-selendroid-installer/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./build/index.js",
+  "bin": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "appium-logger": "^1.1.7",
+    "appium-support": "^1.1.2",
+    "babel-runtime": "=5.6.16",
+    "bluebird": "^2.9.32",
+    "request-promise": "^0.4.3",
+    "source-map-support": "^0.3.1",
+    "teen_process": "^1.2.2"
+  },
+  "scripts": {
+    "prepublish": "./node_modules/.bin/gulp prepublish",
+    "test": "./node_modules/.bin/gulp once",
+    "watch": "./node_modules/.bin/gulp"
+  },
+  "devDependencies": {
+    "appium-gulp-plugins": "^1.2.12",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "gulp": "^3.8.11",
+    "mochawait": "^2.0.0",
+    "yargs": "^3.10.0"
+  }
+}
