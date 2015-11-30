@@ -1,10 +1,10 @@
 {
   "name": "appium-selendroid-installer",
-  "description": "Description goes here.",
+  "description": "Package to install and configure Selendroid",
   "keywords": [
     "appium"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "appium",
   "license": "Apache-2.0",
   "repository": {
