@@ -1,15 +1,27 @@
+import _ from 'lodash';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import { fs } from 'appium-support';
 import { withMocks } from 'appium-test-support';
-import { serverExists, SE_APK_PATH, SE_MANIFEST_PATH } from '..';
+import { serverExists, SE_APK_PATH, SE_MANIFEST_PATH, setupSelendroid } from '..';
+import log from '../lib/logger';
 
 
 chai.should();
 chai.use(chaiAsPromised);
 
 describe('appium-selendroid-installer', () => {
-  describe('setupSelendroid', withMocks({fs}, () => {
+  describe('setupSelendroid', withMocks({log}, (mocks) => {
+    it('should error and stop if jar cannot be found', async () => {
+      // unset PATH in env so we can't find 'jar' on path
+      // (this turned out to be easier than trying to mock teen_process.exec
+      let oldEnv = _.clone(process.env);
+      process.env = Object.assign(process.env, {PATH: ""});
+      mocks.log.expects("error").once();
+      await setupSelendroid();
+      mocks.log.verify();
+      process.env = oldEnv;
+    });
   }));
 
   describe('serverExists', withMocks({fs}, (mocks) => {
