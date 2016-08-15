@@ -1,16 +1,4 @@
-appium-selendroid-installer
+[DEPRECATED] appium-selendroid-installer
 ===================
 
-Work in progress, stay tuned!
-
-## Watch
-
-```
-npm run watch
-```
-
-## Test
-
-```
-npm test
-```
+This project has been deprecated and should not be used. Its code has been merged into [appium-selendroid-driver](https://github.com/appium/appium-selendroid-driver).
